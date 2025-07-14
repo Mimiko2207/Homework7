@@ -8,20 +8,23 @@ public class Main {
         int money = 15_000;
         int only = 0;
         int i = 0;
-        for (; only < 2_459_000; i++) {
+        while (only < 2_459_000) {
             only = only + only / 100;
             only = only + money;
+            i++;
             System.out.println("Месяц " + i + " ,сумма накоплений равна " + only + " рублей");
         }
 
         System.out.println("Задача 2");
-
-        for (int u = 1; u <= 10; u++) {
+        int u = 0;
+        while (u < 10) {
+            u++;
             System.out.print("  " + u);
         }
+
         System.out.println();
-        for (int u = 10; u >= 1; u--) {
-            System.out.print("  " + u);
+        for (int m = 10; m >= 1; m--) {
+            System.out.print("  " + m);
         }
 
         System.out.println("Задача 3");
@@ -63,25 +66,28 @@ public class Main {
         int total = 15_000;
         double percent = 0.07;
         for (int year = 1; year <= 9; year++) {
-            for (int months = 1; months <= 6; months++) {
+            for (int months = 1; months <= 6; months++)
                 total += total * percent;
+                if (mont % 6 == 0) {
+                    System.out.println("Полгода " + year + " сумма " + total);
+                }
             }
-            System.out.println("Полгода " + year + " сумма " + total);
+
+
+            System.out.println("Задача 7");
+            int friDay = 1;
+            for (int day = friDay; day <= 31; day += 7) {
+                System.out.println("Сегодня пятница " + day + " , необходимо подготовить отчет");
+            }
+
+            System.out.println("Задача 8");
+            int yrTwo = 1825;
+            int yrOne = 2125;
+            for (int y = yrTwo; y <= yrOne; y += 79) {
+                System.out.println(y);
+            }
+
+
         }
-
-        System.out.println("Задача 7");
-        int friday = 1;
-        for (int day = friday; day <= 31; day += 7) {
-            System.out.println("Сегодня пятница " + day+ " , необходимо подготовить отчет");
-        }
-
-        System.out.println("Задача 8");
-        int yrTwo = 1825;
-        int yrOne = 2125;
-        for (int y = yrTwo; y <= yrOne; y +=79){
-            System.out.println(y);
-        }
-
-
     }
-}
+
