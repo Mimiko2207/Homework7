@@ -69,9 +69,12 @@ public class Main {
             for (int months = 1; months <= 6; months++)
                 total += total * percent;
                 if (mont % 6 == 0) {
+                }
                     System.out.println("Полгода " + year + " сумма " + total);
                 }
-            }
+
+
+
 
 
             System.out.println("Задача 7");
